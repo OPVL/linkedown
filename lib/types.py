@@ -1,4 +1,4 @@
-from typing import List, Optional, TypedDict
+from typing import Dict, List, Optional, TypedDict
 
 
 class Course(TypedDict):
@@ -10,6 +10,7 @@ class WebConfig(TypedDict):
     video_element_id: str
     next_button_class: str
     course_title_class: str
+    chapter_link_class: str
     user_agent: str
 
 
@@ -30,3 +31,18 @@ class Config(TypedDict):
     cookies: CookieConfig
     application: AppConfig
     courses: List[Course]
+
+
+class Chapter(TypedDict):
+    href: str
+    title: str
+
+
+class Section(TypedDict):
+    title: str
+    chapters: List[Chapter]
+    num_chapters: int
+
+
+class WebChapter(TypedDict):
+    sections: List[Section]
