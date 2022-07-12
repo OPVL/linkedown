@@ -1,0 +1,30 @@
+{
+    "python.languageServer": "Pylance",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "python.envFile": "${workspaceFolder}/.venv",
+    "python.testing.pytestArgs": [
+        // Uncomment to passively collect code coverage
+        // Breaks debugging so do not commit
+        "--cov",
+        "--cov-report=xml",
+        "--cov-append",
+        // If you want to print out to stdout, uncomment below:
+        "-s",
+        "test/"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true
+}
