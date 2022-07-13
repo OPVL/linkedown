@@ -2,7 +2,8 @@
     "web": {
         "video_element_selector": "vjs_video_3_html5_api",
         "course_title_selector": "clamp-1 t-16 t-bold t-white",
-        "chapter_link_class": "ember-view classroom-toc-item__link t-normal"
+        "chapter_link_class": "ember-view classroom-toc-item__link t-normal",
+        "cookie_host": "www.linkedin.com"
     },
     "cookies": {
         "li_at": "",
@@ -12,7 +13,9 @@
         "download": false,
         "download_list": "download.json",
         "logfile": "download.log",
-        "output_dir": "courses"
+        "output_dir": "courses",
+        "delay": 1.5,
+        "preload_on_fail": true
     },
     "courses": [
         {
